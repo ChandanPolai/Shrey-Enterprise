@@ -43,3 +43,43 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
+
+
+// counter effect functionality
+let counters = document.querySelectorAll('.counter');
+        let counterSection = document.getElementById('counterSection');
+        let activated = false;
+        
+        function resetCounters() {
+            counters.forEach(counter => counter.innerText = "0");
+            activated = false;
+        }
+        
+        function startCounting() {
+            counters.forEach(counter => {
+                let target = +counter.getAttribute('data-target');
+                let count = 0;
+                let step = target / 100;
+                let interval = setInterval(() => {
+                    count += step;
+                    if (count >= target) {
+                        count = target;
+                        clearInterval(interval);
+                    }
+                    counter.innerText = Math.floor(count) + "+";
+                }, 20);
+            });
+            activated = true;
+        }
+        
+        window.addEventListener('scroll', function () {
+            let rect = counterSection.getBoundingClientRect();
+            let inView = rect.top < window.innerHeight && rect.bottom > 0;
+            
+            if (inView && !activated) {
+                startCounting();
+            } else if (!inView && activated) {
+                resetCounters();
+            }
+        });
+
