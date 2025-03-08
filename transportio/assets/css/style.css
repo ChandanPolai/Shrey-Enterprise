@@ -238,6 +238,126 @@ body {
   margin-block-end: 10px;
 }
 
+.services-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.service-wrapper {
+  width: 100%;
+  margin: 0 auto 60px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-title {
+  font-size: 3rem;
+  font-weight: bold;
+  /* text-align: center; */
+  /* margin-bottom: 25px; */
+  color: #333;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto 25px auto;
+}
+
+.service-title:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 5%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #333;
+}
+
+.service-box-odd, .service-box-even {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  align-items: stretch;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  background-color: #fff;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.service-box-even {
+  flex-direction: row-reverse;
+}
+
+.service-detail-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* padding: 25px; */
+  justify-content: space-between;
+}
+
+.service-detail-section p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  word-spacing: 4px;
+}
+
+.service-detail-section img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+  aspect-ratio: 16/13; /* Maintains consistent image proportions */
+}
+
+.service-img-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.service-image:hover, .service-detail-section img:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .service-box-odd, .service-box-even {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .service-detail-section {
+    padding: 20px;
+  }
+  
+  .service-detail-section p {
+    word-spacing: 2px;
+  }
+  
+  .service-img-container {
+    min-height: 250px;
+  }
+}
+
 .section-text-aboutus{
   color: var(--dark-orange);
   font-size: var(--fs-6);
