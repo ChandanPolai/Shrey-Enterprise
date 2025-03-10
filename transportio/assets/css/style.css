@@ -353,6 +353,7 @@ body {
 }
 
 .service-image:hover,
+.service-image-2:hover,
 .service-detail-section img:hover {
   transform: scale(1.05);
 }
