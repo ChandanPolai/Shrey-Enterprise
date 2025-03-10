@@ -264,7 +264,7 @@ body {
   font-weight: bold;
   /* text-align: center; */
   /* margin-bottom: 25px; */
-  color: #333;
+  color: var(--dark-orange);
   position: relative;
   max-width: 1000px;
   margin: 0 auto 25px auto;
@@ -278,7 +278,7 @@ body {
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background-color: #333;
+  background-color: var(--dark-orange);
 }
 
 .service-box-odd, .service-box-even {
@@ -286,9 +286,9 @@ body {
   width: 100%;
   gap: 40px;
   align-items: stretch;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  /* box-shadow: 0 5px 15px rgba(0,0,0,0.1); */
   overflow: hidden;
-  background-color: #fff;
+  /* background-color: #fff; */
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -1112,7 +1112,7 @@ body {
 
 .footer-bottom {
   padding-block: 40px;
-  border-block-start: 1px solid var(--prussian-blue);
+  border-block-start: 1px solid var(--dark-orange);
   font-size: var(--fs-9);
   color: var(--indigo-dye);
 }
@@ -1747,13 +1747,13 @@ body {
 }
 
 .section-title:after {
-  content: "";
+  /* content: "";
   position: absolute;
   left: 0;
   bottom: -10px;
   width: 80px;
   height: 3px;
-  background-color: #ff6b35;
+  background-color: #ff6b35; */
 }
 
 .why-us-intro {
