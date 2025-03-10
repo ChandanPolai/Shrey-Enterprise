@@ -343,6 +343,13 @@ body {
   transition: transform 0.4s ease;
 }
 
+.service-image-2{
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
 .service-image:hover, .service-detail-section img:hover {
   transform: scale(1.05);
 }
@@ -357,13 +364,21 @@ body {
 
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
+  .services-container {
+    padding: 0px;
+  }
+
   .service-box-odd, .service-box-even {
     flex-direction: column;
     gap: 20px;
   }
-  
-  .service-detail-section {
-    padding: 20px;
+
+  .service-images-container{
+    height: auto;
+  }
+
+  .service-image-2{
+    width: 100%;
   }
   
   .service-detail-section p {
@@ -372,6 +387,12 @@ body {
   
   .service-img-container {
     min-height: 250px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .service-title:after {
+    left: 10%;
   }
 }
 
