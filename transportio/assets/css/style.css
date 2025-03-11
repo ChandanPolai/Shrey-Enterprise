@@ -1077,27 +1077,48 @@ body {
 
 .footer {
   background-color: var(--plutinum);
-  color: var(--prussian-blue);
+  color: grey;
+  padding: 40px 0;
 }
 
-.footer-top {
-  display: grid;
-  gap: 40px;
+/* Large screen ke liye flex aur equal width */
+@media (min-width: 992px) {
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  
+  .footer-brand, .footer-list {
+    flex: 1; /* Sabko equal width mile */
+    text-align: center;
+  }
 }
 
-.footer .logo {
-  color: var(--prussian-blue);
-  font-weight: var(--fw-800);
-  font-size: 3.2rem;
+/* Small screen ke liye grid layout */
+@media (max-width: 991px) {
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
 }
 
-.footer-text {
-  margin-block: 10px 30px;
+/* Logo Image ko fix size de diya */
+.footer .logo img {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .social-list {
   display: flex;
+  justify-content: center;
   gap: 10px;
+  margin-top: 20px;
 }
 
 .social-link {
@@ -1105,6 +1126,10 @@ body {
   color: var(--white);
   font-size: 20px;
   padding: 12px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: var(--transition);
 }
 
@@ -1114,19 +1139,64 @@ body {
 
 .footer-list-title {
   font-size: var(--fs-6);
-  max-width: max-content;
-  padding-block-end: 10px;
-  border-block-end: 3px solid var(--dark-orange);
-  margin-block-end: 20px;
+  border-bottom: 3px solid var(--dark-orange);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.footer-list {
+  list-style: none;
 }
 
 .footer-link {
+  color: grey;
+  text-decoration: none;
   padding-block: 6px;
+  display: inline-block;
+  transition: 0.3s;
 }
 
+.footer-link:hover {
+  color: var(--dark-orange);
+}
+
+/* Contact Info Section */
+.footer-list.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Contact Item Proper Alignment */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+/* Contact Icons ko proper size aur alignment diya */
+.contact-icon {
+  font-size: 22px;
+  color: grey;
+  width: 30px; /* Fixed width for alignment */
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contact Text */
+.contact-text {
+  flex: 1; /* Taaki text icon ke sath line me aaye */
+}
+
+/* Footer Bottom */
 .footer-bottom {
-  padding-block: 40px;
-  border-block-start: 1px solid var(--dark-orange);
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--dark-orange);
   font-size: var(--fs-9);
   color: var(--indigo-dye);
 }
