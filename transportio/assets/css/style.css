@@ -399,6 +399,16 @@ body {
   .service-title:after {
     left: 10%;
   }
+
+  .about .abs-img-1 {
+    position: absolute;
+    width: 150px;
+    top: 40px;
+    left: 160px;
+    animation: move 2s ease-in-out infinite alternate;
+}
+
+
 }
 
 .section-text-aboutus {
@@ -505,7 +515,7 @@ body {
 }
 
 .header.active {
-  background-color: var(--green-blue-crayola);
+  background-color: var(--dark-orange);
 }
 
 .header .container {
@@ -703,7 +713,6 @@ body {
 
 .about-banner {
   position: relative;
-  box-shadow: var(--shadow-2);
   max-width: 300px;
   margin-block-end: 60px;
 }
@@ -1225,7 +1234,9 @@ body {
   }
 
   .about .abs-img-1 {
-    right: -200px;
+    right: -220px;
+    top: 100px;
+
   }
 
 }
@@ -1552,7 +1563,7 @@ body {
   }
 
   .about .abs-img-1 {
-    right: -100px;
+    right: -150px;
   }
 
   .about :is(.section-title, .section-text) {
@@ -1850,8 +1861,8 @@ body {
 }
 
 .counter-box {
-  background: #FF6B35;
-  color: black;
+  background: var(--dark-orange);
+  color: white;
   border-radius: 10px;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   width: 150px;
@@ -2062,12 +2073,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 150px;
+  height: 200px;
 }
 
 .brand-logo {
   max-width: 80%;
-  max-height: 100px;
+  /* max-height: 100px; */
   transition: all 0.3s ease;
   filter: grayscale(0%);
 }
