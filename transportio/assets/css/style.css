@@ -23,7 +23,7 @@
   --green-blue-crayola: #F87C34;
   --prussian-blue: hsl(202, 72%, 15%);
   --eerie-black: hsl(210, 11%, 15%);
-  --dark-orange: hsl(32, 100%, 50%);
+  --dark-orange:#ff6b01;
   --alice-blue: hsl(203, 100%, 97%);
   --light-gray: hsl(0, 0%, 80%);
   --indigo-dye: hsl(202, 64%, 26%);
@@ -1122,7 +1122,7 @@ body {
 }
 
 .social-link {
-  background-color: var(--indigo-dye);
+  background-color: #5c5c5c;
   color: var(--white);
   font-size: 20px;
   padding: 12px;
@@ -1844,7 +1844,7 @@ body {
 
 .why-us-intro {
   margin-bottom: 30px;
-  color: #555;
+  color: #5c5c5c;
   line-height: 1.6;
   font-size: 1.2em;
 }
@@ -1924,9 +1924,8 @@ body {
 /* counter Effect styling section */
 
 .counter-section {
-  /* background: #444; */
   color: white;
-  padding: 1em 0;
+  padding: 2em 8em;
   text-align: center;
 }
 
@@ -1948,6 +1947,13 @@ body {
   margin: 0;
   font-size: 2em;
 }
+
+@media (max-width: 993px) {
+  .counter-section {
+    padding: 2em 0em;
+  }
+}
+
 
 /* 
       navbar menu items dropdown
