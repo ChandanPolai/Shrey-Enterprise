@@ -830,7 +830,7 @@ body {
 }
 
 .feature-card:is(:hover, :focus-within) {
-  box-shadow: var(--shadow-3);
+  box-shadow:  0 4px 15px rgba(255, 107, 53, 0.2);
 }
 
 .feature-card::before {
@@ -2150,6 +2150,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 200px;
+  box-shadow:  0 4px 15px rgba(255, 107, 53, 0.2);
 }
 
 .brand-logo {
