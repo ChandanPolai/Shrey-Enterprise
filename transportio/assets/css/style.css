@@ -1180,7 +1180,7 @@ body {
 .contact-icon {
   font-size: 22px;
   color: grey;
-  width: 30px; /* Fixed width for alignment */
+  width: 30px; 
   height: 30px;
   display: flex;
   align-items: center;

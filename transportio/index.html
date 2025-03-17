@@ -95,12 +95,12 @@
                   <a href="tel:+91 99799 41282" class="contact-number">+91 99799 41282</a>
                </div>
                <div class="contact-icon">
-                  <ion-icon name="call-outline"></ion-icon>
+                  <ion-icon name="call-outline"  style="color: #ffffff;"></ion-icon>
                </div>
             </div>
             <button class="nav-open-btn" aria-label="Open menu" data-nav-toggler>
                <ion-icon name="menu-outline"></ion-icon>
-            </button>
+            </button> 
             <div class="overlay" data-nav-toggler data-overlay></div>
          </div>
       </header>
@@ -725,12 +725,19 @@
                   <li>
                      <p class="footer-list-title">Contact Info</p>
                   </li>
-                  <li class="contact-item  ">
-                     <span class="contact-icon">
-                        <ion-icon name="location-outline"></ion-icon>
+                  <li class="contact-item">
+                     <span class="contact-icon" style="margin-block-end: 2.2em;">
+                         <ion-icon name="location-outline"></ion-icon>
                      </span>
-                  <span>A-42/4, Ichchapor GIDC, Ichhapore, Surat, Gujarat-394510</span>
-                  </li>
+                     <span>
+                         <a href="https://www.google.com/maps/search/?api=1&query=A+42/4+Ichhapore,+GIDC,+near+Audi+Service+Center,+Ichchhapor,+Limla,+Gujarat+394510" 
+                            target="_blank" 
+                            style="text-decoration: none; color: inherit;">
+                             A 42/4 Ichhapore, GIDC, nr. Audi Service Center, Ichchhapor, Limla, Gujarat 394510
+                         </a>
+                     </span>
+                 </li>
+                 
                   <li class="contact-item">
                      <span class="contact-icon">
                         <ion-icon name="call-outline"></ion-icon>
@@ -774,35 +781,6 @@
          - ionicon link
          -->
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-      <!-- Jquery Cdn -->
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
-      <script>
-         $(document).ready(function() {
-           // Enable swipe gestures for the carousel
-           $(".carousel-inner").swipe({
-             swipeLeft: function() {
-               $(this).closest('.carousel').carousel('next');
-             },
-             swipeRight: function() {
-               $(this).closest('.carousel').carousel('prev');
-             },
-             threshold: 50,
-             allowPageScroll: "vertical"
-           });
-           
-           // Make sure Bootstrap touch is enabled
-           $('#heroCarousel').attr('data-bs-touch', 'true');
-           
-           // Initialize carousel with custom options
-           var carousel = new bootstrap.Carousel(document.getElementById('heroCarousel'), {
-             interval: 5000,
-             wrap: true,
-             keyboard: true,
-             touch: true
-           });
-         });
-      </script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>     
    </body>
 </html>
