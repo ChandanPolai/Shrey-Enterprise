@@ -406,7 +406,7 @@ body {
     width: 150px;
     top: 40px;
     left: 160px;
-    animation: move 2s ease-in-out infinite alternate;
+    /* animation: move 2s ease-in-out infinite alternate; */
 }
 
 
@@ -721,7 +721,7 @@ body {
   position: absolute;
   bottom: 40px;
   right: 0;
-  animation: move 2s ease-in-out infinite alternate;
+  /* animation: move 2s ease-in-out infinite alternate; */
 }
 
 .about :is(.section-title, .section-text) {
