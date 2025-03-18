@@ -628,15 +628,15 @@
                         <h2>Get In Touch</h2>
                         <form>
                            <div class="mb-3 input-group">
-                              <span class="input-group-text"><i class="fas fa-user"></i></span>
+                              <span class="input-group-text"><ion-icon name=""></ion-icon></span>
                               <input type="text" class="form-control" placeholder="Enter your name" required>
                            </div>
                            <div class="mb-3 input-group">
-                              <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                              <span class="input-group-text"><ion-icon name=""></ion-icon></span>
                               <input type="email" class="form-control" placeholder="Enter your email" required>
                            </div>
                            <div class="mb-3 input-group">
-                              <span class="input-group-text"><i class="fas fa-comment"></i></span>
+                              <span class="input-group-text"><ion-icon name=""></ion-icon> </span>
                               <textarea class="form-control" rows="4" placeholder="Your message..." required></textarea>
                            </div>
                            <button type="" class="btn contact-send">Send Message</button>
@@ -781,6 +781,25 @@
          - ionicon link
          -->
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>     
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>  
+      <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+ 
+      <script>
+         function initMap() {
+             var location = { lat: 21.187590111588342, lng: 72.72878391534256 };
+ 
+             var map = new google.maps.Map(document.getElementById("map"), {
+                 zoom: 15,
+                 center: location,
+             });
+ 
+             var marker = new google.maps.Marker({
+                 position: location,
+                 map: map,
+                 title: "My Location"
+             });
+         }
+
+     </script>  
    </body>
 </html>

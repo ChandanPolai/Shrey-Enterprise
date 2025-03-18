@@ -2253,6 +2253,7 @@ body {
   background: var(--dark-orange);
   color: white;
   border: none;
+  padding: 0;
 }
 
 .contact-send:hover {
