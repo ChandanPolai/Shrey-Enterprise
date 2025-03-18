@@ -246,10 +246,11 @@ body {
 
 .service-wrapper {
   width: 100%;
-  margin: 0 auto 60px;
+  padding: 50px 0px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s forwards;
+  border-bottom: 4px solid rgba(179, 179, 179, 0.438);
 }
 
 @keyframes fadeInUp {
@@ -462,11 +463,6 @@ body {
 
 .btn:is(:hover, :focus)::after {
   width: 40px;
-}
-
-.grid-list {
-  display: grid;
-  gap: 30px;
 }
 
 .btn-link {
@@ -815,6 +811,8 @@ body {
 
 .feature .title-wrapper {
   margin-block-end: 30px;
+  justify-items: self-start;
+    padding-left: 100px;
 }
 
 .feature .section-text {
@@ -827,20 +825,21 @@ body {
   text-align: center;
   border: 1px solid var(--alice-blue);
   transition: var(--transition);
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+}
+
+@media (max-width: 767px) {
+  .feature-card {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
 .feature-card:is(:hover, :focus-within) {
   box-shadow:  0 4px 15px rgba(255, 107, 53, 0.2);
-}
-
-.feature-card::before {
-  content: var(--card-number);
-  color: var(--cultured-1);
-  font-family: var(--ff-oswald);
-  font-size: var(--fs-1);
-  font-weight: var(--fw-700);
-  line-height: 1;
-  transition: var(--transition);
 }
 
 .feature-card:is(:hover, :focus-within)::before {
@@ -849,17 +848,21 @@ body {
 
 .feature-card .card-icon {
   background-color: var(--alice-blue);
-  width: 170px;
-  height: 170px;
+  min-width: 170px;
+  min-height: 170px;
   display: grid;
   place-content: center;
   border-radius: 50%;
   margin-inline: auto;
-  margin-block-end: 30px;
+}
+
+.card-icon img{
+  min-height: 150px;
+  min-width: 150px;
 }
 
 .feature-card .card-text {
-  margin-block: 20px 40px;
+  margin-block: 20px 0px;
 }
 
 .feature-card .card-btn {
@@ -1406,11 +1409,6 @@ body {
     --fs-3: 6rem;
   }
 
-  .grid-list {
-    grid-template-columns: 1fr 1fr;
-  }
-
-
 
   /**
    * HERO
@@ -1431,15 +1429,6 @@ body {
     padding: 12px 30px;
   }
 
-
-
-  /**
-   * FEATURES
-   */
-
-  .feature-card::before {
-    --fs-1: 10rem;
-  }
 
 
 
@@ -1555,10 +1544,6 @@ body {
     margin-inline: auto;
   }
 
-  .grid-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
 
 
   /**
@@ -1650,7 +1635,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-items: self-end;
   }
 
   .feature .section-text {
@@ -1658,14 +1642,13 @@ body {
   }
 
   .feature-list {
-    margin-block-start: 120px;
-    display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
   }
 
   .feature-card {
-    padding-block-start: 80px;
+    padding-block-start: 50px;
   }
 
   .feature-card::before {

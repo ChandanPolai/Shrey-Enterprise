@@ -184,18 +184,21 @@
                            </p> -->
                      </div>
                   </div>
-                  <ul class="feature-list grid-list">
+                  <div class="feature-list">
                      <li>
                         <div class="feature-card" style="--card-number: '01'">
                            <div class="card-icon">
                               <img src="SHREY Images/About-us-images/Screenshot_20250305_172229.png" width="94" height="94" class="rounded-5" alt="">
                            </div>
-                           <h3 class="h3 card-title">The Legacy of Excellence</h3>
-                           <p class="card-text">
-                              Since 2006, Shrey Enterprise has been a trusted name in the
-                              packaging industry, known for quality, precision, and dedication.
-                             
-                           </p>
+                           <span style="text-align: start;">
+                              <h3 class="h3 card-title">The Legacy of Excellence</h3>
+                              <p class="card-text">
+                                 Since 2006, Shrey Enterprise has been a trusted name in the
+                                 packaging industry, known for quality, precision, and dedication.
+                                 From its roots as a family business, it has grown into a symbol of
+                                 reliability, blending advanced technology with skilled craftsmanship 
+                              </p>
+                           </span>
                           
                         </div>
                      </li>
@@ -204,11 +207,14 @@
                            <div class="card-icon">
                               <img src="SHREY Images/About-us-images/Screenshot_20250305_171443.png" class="rounded-5" width="94" height="94" alt="">
                            </div>
-                           <h3 class="h3 card-title">Crafting Relationships, Not Just Products</h3>
+                           <div style="text-align: start;">
+                              <h3 class="h3 card-title">Crafting Relationships, Not Just Products</h3>
                            <p class="card-text">
                               Customer satisfaction is our priority, fostering partnerships through
                               personalized service and meticulous attention to detail.
                            </p>
+                           </div>
+                           
                           
                         </div>
                      </li>
@@ -217,12 +223,15 @@
                            <div class="card-icon">
                               <img src="SHREY Images/About-us-images/Screenshot_20250305_171450.png" class="rounded-5" width="94" height="94" alt="">
                            </div>
-                           <h3 class="h3 card-title">Safety : Our Core Responsibility</h3>
+                           
+                           <div style="text-align: start;">
+                              <h3 class="h3 card-title">Safety : Our Core Responsibility</h3>
                            <p class="card-text">
                               Safety is integral to our culture, ensuring the well-being of
                               employees, clients, and materials through strict measures and
                               training.
                            </p>
+                           </div>
                           
                         </div>
                      </li>
@@ -231,17 +240,20 @@
                            <div class="card-icon">
                               <img src="SHREY Images/About-us-images/Screenshot_20250305_171458.png" class="rounded-5" width="94" height="94" alt="">
                            </div>
-                           <h3 class="h3 card-title">A Team that Powers Our Growth
-                           </h3>
-                           <p class="card-text">
-                              Our success lies in a team combining creativity with technology to
-                              deliver excellence. At Shrey Enterprise, we craft trust, innovation, and
-                              quality in every project.
-                           </p>
+                           <div style="text-align: start;">
+                              <h3 class="h3 card-title">A Team that Powers Our Growth
+                              </h3>
+                              <p class="card-text">
+                                 Our success lies in a team combining creativity with technology to
+                                 deliver excellence. At Shrey Enterprise, we craft trust, innovation, and
+                                 quality in every project.
+                              </p>
+                           </div>
+                           
                         
                         </div>
                      </li>
-                  </ul>
+                  </div>
                </div>
             </section>
             <!-- aboutus-end -->
@@ -289,8 +301,8 @@
                -->
             <section class="section service" id="service" aria-label="service">
                <div class="container">
-                  <p class="section-subtitle">All Services</p>
-                  <h2 class="h2 section-title">Trusted For Our Services</h2>
+                  <p class="section-subtitle">Our Services</p>
+                  <!-- <h2 class="h2 section-title">Trusted For Our Services</h2> -->
                   <div class="service-container">
                      <div class="service-wrapper">
                         <h3 class="service-title">WOODEN BOX</h3>
@@ -781,25 +793,32 @@
          - ionicon link
          -->
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>  
-      <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
- 
-      <script>
-         function initMap() {
-             var location = { lat: 21.187590111588342, lng: 72.72878391534256 };
- 
-             var map = new google.maps.Map(document.getElementById("map"), {
-                 zoom: 15,
-                 center: location,
-             });
- 
-             var marker = new google.maps.Marker({
-                 position: location,
-                 map: map,
-                 title: "My Location"
-             });
-         }
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>     
 
-     </script>  
+      <script>
+         document.addEventListener("contextmenu", function (e) {
+           e.preventDefault();
+         });
+       </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+ 
+<script>
+   function initMap() {
+       var location = { lat: 21.187590111588342, lng: 72.72878391534256 };
+
+       var map = new google.maps.Map(document.getElementById("map"), {
+           zoom: 15,
+           center: location,
+       });
+
+       var marker = new google.maps.Marker({
+           position: location,
+           map: map,
+           title: "My Location"
+       });
+   }
+
+</script> 
    </body>
 </html>
