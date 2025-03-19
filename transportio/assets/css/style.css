@@ -593,7 +593,7 @@ body {
 }
 
 .navbar-link {
-  color: var(--black);
+  color: grey;
   display: flex;
   justify-content: space-between;
   align-items: center;
