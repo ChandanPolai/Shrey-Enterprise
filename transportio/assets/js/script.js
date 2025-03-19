@@ -77,3 +77,43 @@ window.addEventListener("scroll", function () {
     resetCounters();
   }
 });
+
+
+// testimonial slider
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize the carousel with auto-sliding
+  const carousel = new bootstrap.Carousel(document.getElementById('testimonialCarousel'), {
+      interval: 5000, // Auto-slide every 5 seconds
+      pause: 'hover' // Pause on hover
+  });
+  
+  // Variables for touch events
+  let touchStartX = 0;
+  let touchEndX = 0;
+  
+  // Get the carousel element
+  const carouselElement = document.getElementById('testimonialCarousel');
+  
+  // Add touch event listeners
+  carouselElement.addEventListener('touchstart', function(e) {
+      touchStartX = e.changedTouches[0].screenX;
+  }, false);
+  
+  carouselElement.addEventListener('touchend', function(e) {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+  }, false);
+  
+  // Handle swipe gesture
+  function handleSwipe() {
+      if (touchEndX < touchStartX - 50) {
+          // Swipe left - go to next slide
+          carousel.next();
+      }
+      
+      if (touchEndX > touchStartX + 50) {
+          // Swipe right - go to previous slide
+          carousel.prev();
+      }
+  }
+});
