@@ -117,3 +117,14 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   }
 });
+
+
+// advertisement shows
+document.addEventListener("DOMContentLoaded", function () {
+  var contactModal = new bootstrap.Modal(document.getElementById('contactModal'), {});
+  contactModal.show(); 
+
+  setTimeout(function () {
+      contactModal.hide(); 
+  }, 3000);
+});

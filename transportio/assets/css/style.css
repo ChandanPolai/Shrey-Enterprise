@@ -2330,3 +2330,54 @@ body {
 
 
 /* testimonial slider css end */
+
+
+
+
+
+   /* Modal Animation */
+   .modal.fade .modal-dialog {
+    transform: scale(0.8);
+    transition: transform 0.3s ease-out;
+}
+.modal.show .modal-dialog {
+    transform: scale(1);
+}
+
+/* Custom Modal Styling */
+.modal-content {
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    text-align: center;
+}
+
+.modal-header {
+    border-bottom: none;
+    justify-content: center;
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.modal-body p {
+    font-size: 18px;
+}
+
+.contact-btn {
+    background: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background: #ffdd44;
+    color: #222;
+}
