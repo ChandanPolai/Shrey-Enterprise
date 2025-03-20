@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var video = document.getElementById("introVideo");
   var contactModal = document.getElementById('contactModal');
 
-  video.oncanplaythrough = function () {
+  video.oncanplay  = function () {
       contactModal.classList.remove("show");
       contactModal.style.display = "none"; 
       document.body.classList.remove("modal-open"); 
