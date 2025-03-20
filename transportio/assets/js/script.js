@@ -119,12 +119,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// advertisement shows
 document.addEventListener("DOMContentLoaded", function () {
-  var contactModal = new bootstrap.Modal(document.getElementById('contactModal'), {});
-  contactModal.show(); 
+  var video = document.getElementById("introVideo");
+  var contactModal = document.getElementById('contactModal');
 
-  setTimeout(function () {
-      contactModal.hide(); 
-  }, 3000);
+  video.oncanplaythrough = function () {
+      contactModal.classList.remove("show");
+      contactModal.style.display = "none"; 
+      document.body.classList.remove("modal-open"); 
+      var backdrop = document.querySelector(".modal-backdrop"); 
+      if (backdrop) {
+          backdrop.remove();
+      }
+  };
 });

@@ -33,21 +33,22 @@
    </style>
    <body id="top">
 
-      <!-- advertisement modal -->
-        <!-- Bootstrap Modal -->
-    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="contactLabel">👋 Welcome to Our Page!</h5>
-              </div>
-              <div class="modal-body">
-                  <p>Need help? Feel free to reach out to us anytime! 📞</p>
-                  <a href="#contact" class="contact-btn">Go to Contact Page</a>
-              </div>
-          </div>
-      </div>
-  </div>
+
+
+<!-- Advertisement Modal -->
+<div class="modal fade show" id="contactModal" tabindex="-1" aria-labelledby="contactLabel" style="display: block; background: rgba(0, 0, 0, 0.5);">
+   <div class="modal-dialog modal-dialog-centered">
+       <div class="modal-content">
+           <div class="modal-header">
+               <h5 class="modal-title" id="contactLabel">👋 Welcome to Our Page!</h5>
+           </div>
+           <div class="modal-body">
+               <p>Need help? Feel free to reach out to us anytime! 📞</p>
+               <a href="#contact" class="contact-btn">Go to Contact Page</a>
+           </div>
+       </div>
+   </div>
+</div>
 
 
       <!-- 
@@ -129,9 +130,9 @@
                - #HERO
                -->
                <section class="fullscreen-video-section" id="home">
-                  <video class="fullscreen-video" autoplay loop muted playsinline>
-                      <source src="shrey-videos/Shrey Website Video (1) (1).mp4" type="video/mp4">
-                  </video>
+                  <video class="fullscreen-video" autoplay loop muted playsinline id="introVideo">
+                     <source src="shrey-videos/Shrey Website Video (1) (1).mp4" type="video/mp4">
+                 </video>
                   <div class="video-overlay"></div>
               </section>
             <!-- 
@@ -889,11 +890,11 @@
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>     
 
-      <script>
+      <!-- <script>
          document.addEventListener("contextmenu", function (e) {
            e.preventDefault();
          });
-       </script>
+       </script> -->
 
        
  
