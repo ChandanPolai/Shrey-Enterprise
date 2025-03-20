@@ -122,14 +122,24 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener("DOMContentLoaded", function () {
   var video = document.getElementById("introVideo");
   var contactModal = document.getElementById('contactModal');
-
-  video.oncanplay  = function () {
-      contactModal.classList.remove("show");
-      contactModal.style.display = "none"; 
-      document.body.classList.remove("modal-open"); 
-      var backdrop = document.querySelector(".modal-backdrop"); 
-      if (backdrop) {
-          backdrop.remove();
-      }
-  };
+  
+  // Function to hide the modal
+  function hideModal() {
+    contactModal.classList.remove("show");
+    contactModal.style.display = "none";
+    document.body.classList.remove("modal-open");
+    var backdrop = document.querySelector(".modal-backdrop");
+    if (backdrop) {
+      backdrop.remove();
+    }
+  }
+  
+  // If video is already loaded
+  if (video.readyState >= 3) {
+    hideModal();
+  } 
+  // If video is still loading
+  else {
+    video.addEventListener("canplay", hideModal);
+  }
 });
