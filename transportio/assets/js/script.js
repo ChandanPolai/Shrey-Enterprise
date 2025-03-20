@@ -122,24 +122,35 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener("DOMContentLoaded", function () {
   var video = document.getElementById("introVideo");
   var contactModal = document.getElementById('contactModal');
-  
-  // Function to hide the modal
+  var closeModal = document.getElementById("closeModal"); // Close button
+
+  // Function to hide the modal after 3 seconds
   function hideModal() {
-    contactModal.classList.remove("show");
-    contactModal.style.display = "none";
-    document.body.classList.remove("modal-open");
-    var backdrop = document.querySelector(".modal-backdrop");
-    if (backdrop) {
-      backdrop.remove();
-    }
+      setTimeout(function () {
+          closeModalManually();
+      }, 3000); // 3 seconds delay
   }
-  
+
+  // Function to close modal manually or automatically
+  function closeModalManually() {
+      contactModal.classList.remove("show");
+      contactModal.style.display = "none";
+      document.body.classList.remove("modal-open");
+      var backdrop = document.querySelector(".modal-backdrop");
+      if (backdrop) {
+          backdrop.remove();
+      }
+  }
+
   // If video is already loaded
   if (video.readyState >= 3) {
-    hideModal();
+      hideModal();
   } 
   // If video is still loading
   else {
-    video.addEventListener("canplay", hideModal);
+      video.addEventListener("canplaythrough", hideModal);
   }
+
+  // Manual close button event
+  closeModal.addEventListener("click", closeModalManually);
 });
