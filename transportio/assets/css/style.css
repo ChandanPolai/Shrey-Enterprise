@@ -290,7 +290,6 @@ body {
   gap: 40px;
   align-items: stretch;
   /* box-shadow: 0 5px 15px rgba(0,0,0,0.1); */
-  overflow: hidden;
   /* background-color: #fff; */
   max-width: 1000px;
   margin: 0 auto;
@@ -320,6 +319,8 @@ body {
   transition: transform 0.3s ease;
   object-fit: cover;
   aspect-ratio: 16/13;
+  padding: 5px;
+  border: 4px solid #FF6D04;
   /* Maintains consistent image proportions */
 }
 
@@ -328,7 +329,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
 .shrink-service-img-container {
@@ -336,7 +336,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   aspect-ratio: 16/9;
 }
 
@@ -345,6 +344,8 @@ body {
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
+  padding: 5px;
+  border: 4px solid #FF6D04;
 }
 
 .service-image-2 {
@@ -352,6 +353,8 @@ body {
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
+  padding: 5px;
+  border: 4px solid #FF6D04;
 }
 
 .service-image:hover,
@@ -364,7 +367,6 @@ body {
   display: flex;
   gap: 40px;
   margin-top: 20px;
-  overflow: hidden;
   height: 400px;
 }
 
