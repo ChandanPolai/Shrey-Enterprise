@@ -320,7 +320,7 @@ body {
   object-fit: cover;
   aspect-ratio: 16/13;
   padding: 5px;
-  border: 4px solid #FF6D04;
+  border: 4px solid var(--dark-orange);
   /* Maintains consistent image proportions */
 }
 
@@ -345,7 +345,7 @@ body {
   object-fit: cover;
   transition: transform 0.4s ease;
   padding: 5px;
-  border: 4px solid #FF6D04;
+  border: 4px solid var(--dark-orange);
 }
 
 .service-image-2 {
@@ -354,7 +354,7 @@ body {
   object-fit: cover;
   transition: transform 0.4s ease;
   padding: 5px;
-  border: 4px solid #FF6D04;
+  border: 4px solid var(--dark-orange);
 }
 
 .service-image:hover,
@@ -887,7 +887,7 @@ body {
 \*-----------------------------------*/
 
 .project {
-  background-color: var(--alice-blue);
+  /* background-color: var(--alice-blue); */
   padding-block: 0;
 }
 
@@ -1636,6 +1636,10 @@ body {
    * FEATURE
    */
 
+   .feature{
+    background: var(--alice-blue);
+   }
+
   .feature .title-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1678,6 +1682,10 @@ body {
   /**
    * BLOG
    */
+
+   .blog{
+    background: var(--alice-blue);
+   }
 
   .blog-list {
     grid-template-columns: 1fr 1fr;
@@ -1922,7 +1930,7 @@ body {
   color: white;
   border-radius: 10px;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-  width: 150px;
+  width: 170px;
   height: 150px;
   display: flex;
   flex-direction: column;
@@ -2054,7 +2062,7 @@ body {
 
 /* this is cleint valuable  */
 .valuable-clients-section {
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 
@@ -2122,7 +2130,7 @@ body {
 
 /* contact  */
 #contact {
-  background: #f8f9fa;
+  /* background: var(--alice-blue); */
 }
 
 .contact-section {
@@ -2130,7 +2138,7 @@ body {
   align-items: center;
   justify-content: center;
   /* min-height: 100vh; */
-  background-color: #f8f9fa;
+  /* background-color: #f8f9fa; */
   padding: 20px;
 }
 
