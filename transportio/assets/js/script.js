@@ -29,14 +29,18 @@ for (let i = 0; i < navLinks.length; i++) {
 
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
+const header_logo = document.getElementById("company-logo");
+console.log(header_logo)
 
 window.addEventListener("scroll", function () {
   if (window.scrollY >= 100) {
     header.classList.add("active");
     backTopBtn.classList.add("active");
+    header_logo.classList.add("active");
   } else {
     header.classList.remove("active");
     backTopBtn.classList.remove("active");
+    header_logo.classList.remove("active");
   }
 });
 

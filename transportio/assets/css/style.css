@@ -24,6 +24,7 @@
   --prussian-blue: hsl(202, 72%, 15%);
   --eerie-black: hsl(210, 11%, 15%);
   --dark-orange:#ff6b01;
+  --dark-Grey:#5c5c5c;
   --alice-blue: hsl(203, 100%, 97%);
   --light-gray: hsl(0, 0%, 80%);
   --indigo-dye: hsl(202, 64%, 26%);
@@ -370,6 +371,11 @@ body {
   height: 400px;
 }
 
+.about{
+  background: var(--alice-blue);
+}
+
+
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
   .services-container {
@@ -416,8 +422,11 @@ body {
 }
 
 .section-text-aboutus {
-  color: var(--dark-orange);
+  color: var(--dark-Grey);
   font-size: var(--fs-6);
+  font-family: var(--ff-oswald);
+  line-height: 1.2;
+  font-weight: var(--fw-600);
 
 }
 
@@ -515,6 +524,10 @@ body {
 
 .header.active {
   background-color: var(--dark-orange);
+}
+
+#company-logo.active{
+  background: white;
 }
 
 .header .container {
@@ -887,7 +900,7 @@ body {
 \*-----------------------------------*/
 
 .project {
-  /* background-color: var(--alice-blue); */
+  background-color: var(--alice-blue);
   padding-block: 0;
 }
 
@@ -934,6 +947,10 @@ body {
 
 .project-card .h3 {
   font-size: var(--fs-7);
+}
+
+.card-title{
+  color: var(--dark-Grey);
 }
 
 .project-card .card-title {
@@ -1877,12 +1894,7 @@ body {
   fill: white;
 }
 
-.feature-title {
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 15px;
-  font-size: 1.5em;
-}
+
 
 .feature-text {
   color: #555;
@@ -1984,6 +1996,8 @@ body {
 .mission-vision-section {
   padding: 70px 0;
 }
+
+
 
 .content-box {
   display: flex;
@@ -2093,6 +2107,7 @@ body {
   /* max-height: 100px; */
   transition: all 0.3s ease;
   filter: grayscale(0%);
+  mix-blend-mode: multiply;
 }
 
 .brand-logo:hover {
@@ -2130,7 +2145,7 @@ body {
 
 /* contact  */
 #contact {
-  /* background: var(--alice-blue); */
+  background: var(--alice-blue);
 }
 
 .contact-section {
@@ -2406,4 +2421,8 @@ body {
 .contact-btn:hover {
     background: #ffdd44;
     color: #222;
+}
+
+.testimonials{
+  background: var(--alice-blue);
 }
