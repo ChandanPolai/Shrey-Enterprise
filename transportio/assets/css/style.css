@@ -526,8 +526,11 @@ body {
   background-color: var(--dark-orange);
 }
 
+
+
 #company-logo.active{
-  background: white;
+  
+  /* background: #000; */
 }
 
 .header .container {
@@ -819,6 +822,9 @@ body {
   margin-block: 10px 20px;
 }
 
+.feature{
+  background: var(--alice-blue);
+}
 
 
 
