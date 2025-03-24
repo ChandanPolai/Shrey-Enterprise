@@ -2236,6 +2236,22 @@ body {
   object-fit: cover;
 }
 
+.watermark {
+  position: absolute;
+  bottom: 35%; 
+  right: 43%; 
+  width: 200px; 
+  opacity: 0.5; 
+}
+
+@media (max-width: 768px) {
+  .watermark {
+    bottom: 30%;  
+    right: 30%;   
+    width: 150px; 
+  }
+}
+
 .video-overlay {
   position: absolute;
   top: 0;
