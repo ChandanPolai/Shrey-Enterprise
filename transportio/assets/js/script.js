@@ -36,7 +36,7 @@ window.addEventListener("scroll", function () {
     header.classList.add("active");
     backTopBtn.classList.add("active");
     // header_logo.classList.add("active");
-    header_logo.src="SHREY Images/logo/new_logo.jpeg";
+    header_logo.src="SHREY Images/logo/shrey logo (1).png";
   } else {
     header.classList.remove("active");
     backTopBtn.classList.remove("active");
