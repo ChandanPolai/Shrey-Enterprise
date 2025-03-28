@@ -371,6 +371,10 @@ body {
   height: 400px;
 }
 
+#home{
+  background: var(--alice-blue);
+}
+
 .about{
   background: var(--alice-blue);
 }
